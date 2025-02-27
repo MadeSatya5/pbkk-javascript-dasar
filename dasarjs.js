@@ -179,7 +179,6 @@ const data = [
   updatedBook;
   
   
-  
   // --------------- Template Literals ----------------
   const summary = `${title} is a book`;
   summary;
@@ -188,46 +187,7 @@ const data = [
   const pagesRange = pages > 1000 ? 'over a thousand' : 'less than 1000';
   pagesRange
   const pagesRange1 = updatedBook.pages > 1000 ? 'over a thousand' : 'less than 1000';
-  pagesRange1
-  
-  // --------------- Arrow Functions ----------------------
-  // function getYear(str){
-  //   return str.split("-")[0];
-  // }                              //  disebut function declaration
-  
-  const getYear = (str) => str.split("-")[0];  //disebut function expression
-  
-  console.log(getYear(publicationDate));
-  
-  
-  // ------------------- Short Circuiting -------------------
-  console.log(true && "Some String");
-  console.log(false && "Some String");
-  console.log(hasMovieAdaptation && "This book has a movie")
-  
-  // falsy: 0, '', null, undefined
-  console.log("jonas" && "hello")
-  console.log(0 && "hello")
-  
-  console.log(true || "Some String");
-  console.log(false || "Some String");
-  
-  console.log(book.translations.spanish);
-  
-  const spanishTranslation = book.translations.spanish || "NOT TRANSLATED";   // Bisa untuk ngasi nilai default
-  spanishTranslation;
-  
-  const count = book.reviews.librarything.reviewsCount ?? "No Data";
-  count;
-  
-  
-  // ---------------- Optional Chaining ---------------------
-  function getTotalReviewCount(book){
-    const goodreads = book.reviews.goodreads.reviewsCount;
-    const librarything = book.reviews.librarything?.reviewsCount; 
-    return goodreads + librarything;
-  }
-  console.log(getTotalReviewCount(book));
+  pagesRange1  
   
   
   // ---------------- Array Map Method ----------------------  Membuat Array baru tanpa ngubah array asli
@@ -238,19 +198,7 @@ const data = [
   
   const titles = books.map((book) => book.title);
   titles;
-  
-  function getTotalReviewCount(book) {
-    const goodreads = book.reviews.goodreads.reviewsCount;
-    const librarything = book.reviews.librarything?.reviewsCount;
-    return goodreads + librarything;
-  }
-  
-  const essentialData = books.map((book) => ({
-    title: book.title,
-    author: book.author,
-    reviewsCount: getTotalReviewCount(book),
-  }));
-  essentialData;
+
   
   // ---------------- Array Filter Method -------------------- Membuat Array Baru yang Isinya Memenuhi Kondisi Fungsinya
   const longBooks = books
@@ -263,10 +211,12 @@ const data = [
     .map((book) => book.title);
   adventureBooks;
   
+
   // ---------------- Array Reduce Method --------------------
   const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
   pagesAllBooks;
   
+
   // ---------------- Array Sort Method ----------------------
   const arr = [3, 7, 1, 9, 6];
   const sortedArr = arr.slice().sort((a, b) => a - b);
