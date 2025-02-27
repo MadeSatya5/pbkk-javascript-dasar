@@ -145,14 +145,14 @@ const data = [
   
   
   // --------------- Destructuring -----------------
+  
   const book = getBook(3);
   book;
   
   // const title = book.title;
   // const author = book.author;
   
-  const { title, author, pages, publicationDate, genres, hasMovieAdaptation } =
-    book; // Destructuring Object
+  const { title, author, pages, publicationDate, genres, hasMovieAdaptation } = book; // Destructuring Object
   console.log(author, title);
   genres;
   
@@ -168,7 +168,7 @@ const data = [
   const newGenres = [...genres, "epic fantasy"]; // Bisa di depan atau belakang Array
   newGenres;
   
-  const updatedBook = { // Object
+  const updatedBook = {
     ...book,
     // Adding a New Property
     moviePublicationDate: "2001-12-19",
