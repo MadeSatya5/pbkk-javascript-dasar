@@ -14,23 +14,6 @@ const data = [
       ],
       hasMovieAdaptation: true,
       pages: 1216,
-      translations: {
-        spanish: "El señor de los anillos",
-        chinese: "魔戒",
-        french: "Le Seigneur des anneaux",
-      },
-      reviews: {
-        goodreads: {
-          rating: 4.52,
-          ratingsCount: 630994,
-          reviewsCount: 13417,
-        },
-        librarything: {
-          rating: 4.53,
-          ratingsCount: 47166,
-          reviewsCount: 452,
-        },
-      },
     },
     {
       id: 2,
@@ -46,19 +29,6 @@ const data = [
       ],
       hasMovieAdaptation: false,
       pages: 295,
-      translations: {},
-      reviews: {
-        goodreads: {
-          rating: 4.16,
-          ratingsCount: 11663,
-          reviewsCount: 812,
-        },
-        librarything: {
-          rating: 4.13,
-          ratingsCount: 2434,
-          reviewsCount: 0,
-        },
-      },
     },
     {
       id: 3,
@@ -68,16 +38,6 @@ const data = [
       genres: ["science fiction", "novel", "adventure"],
       hasMovieAdaptation: true,
       pages: 658,
-      translations: {
-        spanish: "",
-      },
-      reviews: {
-        goodreads: {
-          rating: 4.25,
-          ratingsCount: 1142893,
-          reviewsCount: 49701,
-        },
-      },
     },
   ];
   
@@ -137,8 +97,6 @@ const data = [
   
   
   // ---------------- Array Map Method ----------------------  Membuat Array baru tanpa ngubah array asli
-  const x = [1, 2, 3, 4, 5];
-  console.log(x.map((element) => element * 2)); // [2, 4, 6, 8, 10]
   
   const books = getBooks();
   
