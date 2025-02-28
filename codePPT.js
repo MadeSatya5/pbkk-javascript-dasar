@@ -87,3 +87,21 @@ while (i <= 3) {
   console.log("Number " + i);
   i++;
 }
+
+// Array Method
+// Map
+const values = [1, 2, 3, 4, 5];
+const result1 = values.map((value) => value * 2); 
+console.log(result1) // print [2, 4, 6, 8, 10]
+
+// Filter
+const ages = [10, 20, 30, 40, 50];
+const adult = ages.filter((age) => age >= 20);
+console.log(adult); // print [20, 30, 40, 50]
+
+// Reduce
+const numberss = [5, 6, 1, 4, 3];
+const total = numberss.reduce((acc, number) => acc + number , 0);
+console.log(total); // print 19
+
+
