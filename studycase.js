@@ -80,10 +80,10 @@ console.log(updatedBook);
 // --------------- Template Literals ----------------
 console.log("List buku-buku")
 for (let index = 0; index < data.length; index++) {
-  console.log(`${index+1}. Title: ${title} \ 
-          Tanggal publikasi: ${publicationDate}
-          Author: ${author}
-          Pages: ${pages}`)
+  console.log(`${index+1}. Title: ${data[index].title} \ 
+  Tanggal publikasi: ${data[index].publicationDate}
+  Author: ${data[index].author}
+  Pages: ${data[index].pages}`)
   
 }
 
