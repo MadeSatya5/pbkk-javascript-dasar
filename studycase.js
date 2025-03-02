@@ -78,8 +78,14 @@ console.log(updatedBook);
 
 
 // --------------- Template Literals ----------------
-const summary = `${title} is a book`;
-console.log(summary);
+console.log("List buku-buku")
+for (let index = 0; index < data.length; index++) {
+  console.log(`${index+1}. Title: ${title} \ 
+          Tanggal publikasi: ${data.publicationDate}
+          Author: ${data.author}
+          Pages: ${pages}`)
+  
+}
 
 
 // --------------- Ternary Operators ----------------
@@ -122,3 +128,7 @@ console.log(arr);
 
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
 console.log(sortedByPages);
+
+let arr2 = ["Thofinn", "Askeladd", "Gojo", "Kageyama", "Rem"]
+arr2 = arr2.sort()
+console.log(arr2)
