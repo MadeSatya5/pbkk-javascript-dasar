@@ -58,7 +58,7 @@ console.log(genres);
 // const primaryGenre = genres[0];
 // const secondaryGenre = genres[1];
 
-const [primaryGenre, secondaryGenre, a, ...otherGenres] = genres; // Destructuring Array, ...(Rest / Spread) Harus diakhir
+const [primaryGenre, secondaryGenre, a, ...otherGenres] = genres; // Destructuring Array
 console.log(primaryGenre, secondaryGenre, a, otherGenres);
 
 
