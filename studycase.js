@@ -46,24 +46,25 @@ function getBook(id) {
 // --------------- Destructuring -----------------
 
 const book = getBook(3);
-book;
+console.log(book);
 
 // const title = book.title;
 // const author = book.author;
 
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } = book; // Destructuring Object
-// console.log(author, title);
-// genres;
+console.log(author, title);
+console.log(genres);
 
 // const primaryGenre = genres[0];
 // const secondaryGenre = genres[1];
 
 const [primaryGenre, secondaryGenre, a, ...otherGenres] = genres; // Destructuring Array, ...(Rest / Spread) Harus diakhir
-// console.log(primaryGenre, secondaryGenre, a, otherGenres);
+console.log(primaryGenre, secondaryGenre, a, otherGenres);
+
 
 // -------------- Rest / Spread Operator ---------------
 const newGenres = [...genres, "epic fantasy"]; 
-// newGenres;
+console.log(newGenres);
 
 const updatedBook = {
   ...book,
@@ -73,45 +74,51 @@ const updatedBook = {
   //Overriding an existing property
   pages: 1120,
 };
-// updatedBook;
+console.log(updatedBook);
+
 
 // --------------- Template Literals ----------------
 const summary = `${title} is a book`;
-// summary;
+console.log(summary);
+
 
 // --------------- Ternary Operators ----------------
 const pagesRange = pages > 1000 ? "over a thousand" : "less than 1000";
-// pagesRange;
+console.log(pagesRange);
 const pagesRange1 =
   updatedBook.pages > 1000 ? "over a thousand" : "less than 1000";
-// pagesRange1;
+console.log(pagesRange1);
 
-// ---------------- Array Map Method ----------------------  
 
 const books = getBooks();
 
+// ---------------- Array Map Method ----------------------  
+
 const titles = books.map((book) => book.title);
-// titles;
+console.log(titles);
+
 
 // ---------------- Array Filter Method -------------------- 
 const longBooks = books
   .filter((book) => book.pages > 500)
-// longBooks;
+console.log(longBooks);
 
 const adventureBooks = books
   .filter((book) => book.genres.includes("adventure"))
   .map((book) => book.title);
-// adventureBooks;
+console.log(adventureBooks);
+
 
 // ---------------- Array Reduce Method --------------------
 const pagesAllBooks = books.reduce((acc, book) => acc + book.pages, 0);
-// pagesAllBooks;
+console.log(pagesAllBooks);
+
 
 // ---------------- Array Sort Method ----------------------
 const arr = [3, 7, 1, 9, 6];
 const sortedArr = arr.slice().sort((a, b) => a - b);
-// sortedArr;
-// arr;
+console.log(sortedArr);
+console.log(arr);
 
 const sortedByPages = books.slice().sort((a, b) => b.pages - a.pages);
-// sortedByPages;
+console.log(sortedByPages);
