@@ -81,8 +81,8 @@ console.log(updatedBook);
 console.log("List buku-buku")
 for (let index = 0; index < data.length; index++) {
   console.log(`${index+1}. Title: ${title} \ 
-          Tanggal publikasi: ${data.publicationDate}
-          Author: ${data.author}
+          Tanggal publikasi: ${publicationDate}
+          Author: ${author}
           Pages: ${pages}`)
   
 }
