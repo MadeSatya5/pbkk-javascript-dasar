@@ -13,7 +13,7 @@ const data = [
       "indonesian",
     ],
     hasMovieAdaptation: true,
-    pages: 529,
+    pages: 429,
   },
   {
     id: 2,
